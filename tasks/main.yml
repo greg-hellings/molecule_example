@@ -1,0 +1,14 @@
+- block:
+    - name: Create user group
+      group:
+        name: "{{ molecule_example_user }}"
+        state: present
+
+    - name: Create user
+      user:
+        name: "{{ molecule_example_user }}"
+        group: "{{ molecule_example_user }}"
+        groups: wheel
+        state: present
+  become: "{{ molecule_example_become }}"
+  become_user: "{{ molecule_example_become_user }}"

@@ -1,0 +1,3 @@
+molecule_example_become: true
+molecule_example_become_user: root
+molecule_example_user: test_user
