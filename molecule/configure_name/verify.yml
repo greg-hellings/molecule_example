@@ -1,0 +1,15 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Check for user
+      stat:
+        path: /home/greg
+      register: _is_greg_present
+
+    - name: Assert it is present
+      assert:
+        that: _is_greg_present.stat.exists
