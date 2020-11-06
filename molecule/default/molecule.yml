@@ -1,0 +1,5 @@
+provisioner:
+  inventory:
+    group_vars:
+      all:
+        verify_path: /home/test_user

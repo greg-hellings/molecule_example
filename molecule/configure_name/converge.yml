@@ -1,9 +1,0 @@
----
-- name: Converge
-  hosts: all
-  tasks:
-    - name: "Include molecule_example"
-      include_role:
-        name: "molecule_example"
-  vars:
-    molecule_example_user: greg

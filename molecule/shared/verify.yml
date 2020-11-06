@@ -7,9 +7,9 @@
   tasks:
     - name: Run stat
       stat:
-        path: /home/test_user
+        path: "{{ verify_path }}"
       register: _is_test_user
 
     - name: Be sure it exists
       assert:
-        that: _is_test_user.stat.exists
+        that: _is_test_user.stat.isdir

@@ -1,0 +1,6 @@
+provisioner:
+  inventory:
+    group_vars:
+      all:
+        molecule_example_user: greg
+        verify_path: /home/greg
